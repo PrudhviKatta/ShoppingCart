@@ -1,0 +1,28 @@
+<mat-toolbar class="navbar">
+  <div class="title">SHOPPINGLIST</div>
+  <div *ngIf="logStatus">
+    <button mat-fab (click)="logOut()">
+      <mat-icon>logout</mat-icon>
+      </button>
+  <button mat-fab [routerLink]='["home"]'>
+  <mat-icon >home</mat-icon>
+  </button>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container >
+  <mat-sidenav [opened]="true" disableClose="true" mode="side">
+    <mat-nav-list>
+      <a class="sidecontent" [routerLink]='["costco"]' routerLinkActive="active" mat-list-item>COSTCO</a>
+      <a [routerLink]='["walmart"]' routerLinkActive="active" mat-list-item>WALMART</a>
+      <a [routerLink]='["bestbuy"]'routerLinkActive="active" mat-list-item>BESTBUY</a>
+      <a [routerLink]='["kroger"]'routerLinkActive="active" mat-list-item>KROGER</a>
+      <a [routerLink]='["samsclub"]' routerLinkActive="active" mat-list-item>SAM'S CLUB</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="parent-container">
+    <app-logincard class="login-card" (Logevent)="logevent($event)" *ngIf="!logStatus"></app-logincard>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

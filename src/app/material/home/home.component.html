@@ -1,0 +1,61 @@
+<mat-tab-group>
+    <mat-tab label="Costco"> 
+      <mat-card>
+      <mat-card-header>
+      </mat-card-header>
+      <ng-container *ngFor="let item of costcoObj | keyvalue">
+        
+      <mat-card-content *ngIf="item.value>0">
+          <span>{{"Item : "+item.key+", Quantity : "+item.value}}</span>
+        </mat-card-content>
+        </ng-container>
+    </mat-card>
+  </mat-tab>
+    <mat-tab label="Walmart">
+      <mat-card>
+        <mat-card-header>
+        </mat-card-header>
+        <ng-container *ngFor="let item of   walmartObj | keyvalue">
+          
+        <mat-card-content *ngIf="item.value>0">
+            <span>{{"Item : "+item.key+", Quantity : "+item.value}}</span>
+          </mat-card-content>
+          </ng-container>
+      </mat-card>  
+    </mat-tab>
+    <mat-tab label="BestBuy">
+      <mat-card>
+        <mat-card-header>
+        </mat-card-header>
+        <ng-container *ngFor="let item of   bestbuyObj | keyvalue">
+          
+        <mat-card-content *ngIf="item.value>0">
+            <span>{{"Item : "+item.key+", Quantity : "+item.value}}</span>
+          </mat-card-content>
+          </ng-container>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Kroger"> 
+      <mat-card>
+        <mat-card-header>
+        </mat-card-header>
+        <ng-container *ngFor="let item of   krogerObj | keyvalue">
+          
+        <mat-card-content *ngIf="item.value>0">
+            <span>{{"Item : "+item.key+", Quantity : "+item.value}}</span>
+          </mat-card-content>
+          </ng-container>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Sam's Club"> 
+      <mat-card>
+        <mat-card-header>
+        </mat-card-header>
+        <ng-container *ngFor="let item of   samsclubObj | keyvalue">
+          
+        <mat-card-content *ngIf="item.value>0">
+            <span>{{"Item : "+item.key+", Quantity : "+item.value}}</span>
+          </mat-card-content>
+          </ng-container>
+      </mat-card> </mat-tab>
+  </mat-tab-group>

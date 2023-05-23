@@ -1,0 +1,19 @@
+<div class="body">
+    <mat-grid-list cols="4" rowHeight="4:1">
+        <ng-container *ngFor="let item of obj | keyvalue">
+        <mat-grid-tile>
+            <mat-card>
+            <mat-card-content>{{item.key}}<span>
+                <button mat-icon-button (click)="addDec(item.key)"><mat-icon>remove</mat-icon></button>
+                <span>{{ item.value }}</span>
+                <button mat-icon-button (click)="addInc(item.key)"><mat-icon>add</mat-icon></button>
+            </span>
+        </mat-card-content>
+          </mat-card>  
+        </mat-grid-tile>
+        </ng-container>
+      </mat-grid-list>
+    <div>
+        <button  class="addCart" mat-raised-button  (click)="getValue()">Add to Cart</button>
+    </div>
+    </div> 

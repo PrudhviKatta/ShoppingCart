@@ -1,0 +1,16 @@
+.body {
+    margin: 10px;
+}
+
+mat-card{
+    width: 300px;
+    background-color: #adb5bd;
+}
+mat-card-content{
+    text-align: center;
+    color:black;
+}
+.addcart
+{
+ background-color: #f8f9fa;
+}
